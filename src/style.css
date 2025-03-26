@@ -71,10 +71,16 @@ body {
     font-size: 18px;
     font-weight: 200;
     margin-right: 20px;
+    /* width: 320px; */
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 .show-content {
     margin: 20px;
+    width: 320px;
+
 }
 
 .text {

@@ -5,7 +5,7 @@
 Build using `npm run build`. The build artifacts will be stored in the `dist/` directory.
 
 Run using `npm run start`
-The application with run on the `http://localhost:8080/`. The application will automatically reload if you change any of the source files.
+The application with run on the `http://localhost:8080/`. The application will automatically reload if you save any changes to the source files.
 
 ## How to navigate
 The keyboard functions as your remote control.
