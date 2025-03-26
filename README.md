@@ -1,8 +1,5 @@
 # Hulu - Living Room Devices Application Interview
 
-## About the Application
-
-
 ## Building and Running in your local environment
 
 Build using `npm run build`. The build artifacts will be stored in the `dist/` directory.

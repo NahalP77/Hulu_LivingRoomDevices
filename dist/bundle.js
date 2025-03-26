@@ -23,82 +23,99 @@ var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBP
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, `
 
-body{
+body {
     background-color: black;
     margin: 20px;
 }
 
-.show-title{
+.hide {
+    visibility: hidden;
+}
+  
+.show {
+    visibility: visible;
+}
+
+.carousel-main {
+    display: flex;
+    flex-direction: column;
+}
+  
+.category-title {
+    color: white;
+    padding-left: 25px;
+    margin: 0;
+}
+
+.carousel-content {
+    display: flex;
+    margin: 0 15px;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+.carousel-content > :last-child {
+    margin-right: 0;
+}
+  
+.image {
+    margin-bottom: 20px;
+    width: 300px;
+    height: 150px;
+    border-style:solid;
+    background-size: 300px 150px;
+    white-space: nowrap;
+
+}
+
+.image:focus {
+    outline-color: white;
+    border-color:white;
+    background-color: white;
+    transform: scale(1.1);
+}
+
+.image:active {
+    outline-color: green;
+    border-color: green;
+    background-color: green;
+}
+  
+.image-center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+    height: 150px;
+}
+
+.show-title {
     color: white;
     font-size: 18px;
     font-weight: 200;
     margin-right: 20px;
 }
 
+.show-content {
+    margin: 20px;
+}
+
 .text {
     color:white;
 }
-  
 
-  .image:focus {
-    outline-color: white;
-    border-color:white;
-    background-color: white;
-
+.sub-text{
+    text-align: left;
+    padding-top: 20px;
+    font-size: 15px;
   }
 
-  .image:active {
-    outline-color: green;
-    border-color: green;
-    background-color: green;
-  }
-  
-
-  .hide {
-    visibility: hidden;
-  }
-  
-  .show {
-    visibility: visible;
-  }
-
-  .carousel-main {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .category-title {
-    color: white;
-    padding-left: 25px;
+.text-small {
+    text-align: left;
+    font-size: 14px;
 }
 
-  .carousel-content {
-    display: flex;
-    margin: 0 15px;
-    overflow-x: hidden;
-    scroll-behavior: smooth;
-
-  }
-  
-  .image {
-    margin-right: 20px;
-    width: 300px;
-    height: 150px;
-    border-style:solid;
-    background-size: 300px 150px;
-
-  }
-  
-  .carousel-content > :last-child {
-    margin-right: 0;
-  }
-  
-  .carousel-navigation {
-    justify-content: center;
-    align-items: center;
-  }
-
-  .modal {
+.modal {
     position: fixed; 
     z-index: 1; 
     padding-top: 100px; 
@@ -109,76 +126,59 @@ body{
     overflow: auto; 
     background-color: rgb(0,0,0); 
     background-color: rgba(0,0,0,0.4); 
-  }
+}
   
-  .modal-content {
+.modal-content {
     background-color: black;
     margin: auto;
     padding: 20px;
     border: 1px solid #888;
     width: 50%;
-  }
-  
-  .close {
-    color: white;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-  }
-  
-  .close:hover,
-  .close:focus {
-    color: green;
-    text-decoration: none;
-    cursor: pointer;
-  }
-  
-  .image-center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 300px;
-    height: 150px;
-  }
+}
 
-  .modal-text{
+.modal-text{
     text-align: left;
     padding-top: 20px;
     font-size: 24px;
     font-weight: 500;
     line-height: 30px;
   }
+  
+.close {
+    color: white;
+    background-color: black;
+    border: black;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+  
+.close:hover,
+.close:focus {
+    color: green;
+    text-decoration: none;
+    cursor: pointer;
+}
 
-  .sub-text{
-    text-align: left;
-    padding-top: 20px;
-    font-size: 15px;
-  }
-
-  .text-small{
-    text-align: left;
-    font-size: 14px;
-  }
-
-  li {
-    display: inline-block !important;
+li {
+    display: inline-block;
     list-style: none;
     margin: 0 auto;
     height: 14px;
     }
-      ul li::after {
+    ul li::after {
         content: " | ";
         margin: 0 10px;
-      }
-      ul li:last-child:after {
+    }
+    ul li:last-child:after {
         content: '';
         margin: 0 10px;
-      }
-      ul{
+    }
+    ul {
         padding: 0;
         margin: 0;
-      }
-`, "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":";;AAEA;IACI,uBAAuB;IACvB,YAAY;AAChB;;AAEA;IACI,YAAY;IACZ,eAAe;IACf,gBAAgB;IAChB,kBAAkB;AACtB;;AAEA;IACI,WAAW;AACf;;;EAGE;IACE,oBAAoB;IACpB,kBAAkB;IAClB,uBAAuB;;EAEzB;;EAEA;IACE,oBAAoB;IACpB,mBAAmB;IACnB,uBAAuB;EACzB;;;EAGA;IACE,kBAAkB;EACpB;;EAEA;IACE,mBAAmB;EACrB;;EAEA;IACE,aAAa;IACb,sBAAsB;EACxB;;EAEA;IACE,YAAY;IACZ,kBAAkB;AACtB;;EAEE;IACE,aAAa;IACb,cAAc;IACd,kBAAkB;IAClB,uBAAuB;;EAEzB;;EAEA;IACE,kBAAkB;IAClB,YAAY;IACZ,aAAa;IACb,kBAAkB;IAClB,4BAA4B;;EAE9B;;EAEA;IACE,eAAe;EACjB;;EAEA;IACE,uBAAuB;IACvB,mBAAmB;EACrB;;EAEA;IACE,eAAe;IACf,UAAU;IACV,kBAAkB;IAClB,OAAO;IACP,MAAM;IACN,WAAW;IACX,YAAY;IACZ,cAAc;IACd,4BAA4B;IAC5B,iCAAiC;EACnC;;EAEA;IACE,uBAAuB;IACvB,YAAY;IACZ,aAAa;IACb,sBAAsB;IACtB,UAAU;EACZ;;EAEA;IACE,YAAY;IACZ,YAAY;IACZ,eAAe;IACf,iBAAiB;EACnB;;EAEA;;IAEE,YAAY;IACZ,qBAAqB;IACrB,eAAe;EACjB;;EAEA;IACE,cAAc;IACd,iBAAiB;IACjB,kBAAkB;IAClB,YAAY;IACZ,aAAa;EACf;;EAEA;IACE,gBAAgB;IAChB,iBAAiB;IACjB,eAAe;IACf,gBAAgB;IAChB,iBAAiB;EACnB;;EAEA;IACE,gBAAgB;IAChB,iBAAiB;IACjB,eAAe;EACjB;;EAEA;IACE,gBAAgB;IAChB,eAAe;EACjB;;EAEA;IACE,gCAAgC;IAChC,gBAAgB;IAChB,cAAc;IACd,YAAY;IACZ;MACE;QACE,cAAc;QACd,cAAc;MAChB;MACA;QACE,WAAW;QACX,cAAc;MAChB;MACA;QACE,UAAU;QACV,SAAS;MACX","sourcesContent":["\n\nbody{\n    background-color: black;\n    margin: 20px;\n}\n\n.show-title{\n    color: white;\n    font-size: 18px;\n    font-weight: 200;\n    margin-right: 20px;\n}\n\n.text {\n    color:white;\n}\n  \n\n  .image:focus {\n    outline-color: white;\n    border-color:white;\n    background-color: white;\n\n  }\n\n  .image:active {\n    outline-color: green;\n    border-color: green;\n    background-color: green;\n  }\n  \n\n  .hide {\n    visibility: hidden;\n  }\n  \n  .show {\n    visibility: visible;\n  }\n\n  .carousel-main {\n    display: flex;\n    flex-direction: column;\n  }\n  \n  .category-title {\n    color: white;\n    padding-left: 25px;\n}\n\n  .carousel-content {\n    display: flex;\n    margin: 0 15px;\n    overflow-x: hidden;\n    scroll-behavior: smooth;\n\n  }\n  \n  .image {\n    margin-right: 20px;\n    width: 300px;\n    height: 150px;\n    border-style:solid;\n    background-size: 300px 150px;\n\n  }\n  \n  .carousel-content > :last-child {\n    margin-right: 0;\n  }\n  \n  .carousel-navigation {\n    justify-content: center;\n    align-items: center;\n  }\n\n  .modal {\n    position: fixed; \n    z-index: 1; \n    padding-top: 100px; \n    left: 0;\n    top: 0;\n    width: 100%; \n    height: 100%; \n    overflow: auto; \n    background-color: rgb(0,0,0); \n    background-color: rgba(0,0,0,0.4); \n  }\n  \n  .modal-content {\n    background-color: black;\n    margin: auto;\n    padding: 20px;\n    border: 1px solid #888;\n    width: 50%;\n  }\n  \n  .close {\n    color: white;\n    float: right;\n    font-size: 28px;\n    font-weight: bold;\n  }\n  \n  .close:hover,\n  .close:focus {\n    color: green;\n    text-decoration: none;\n    cursor: pointer;\n  }\n  \n  .image-center {\n    display: block;\n    margin-left: auto;\n    margin-right: auto;\n    width: 300px;\n    height: 150px;\n  }\n\n  .modal-text{\n    text-align: left;\n    padding-top: 20px;\n    font-size: 24px;\n    font-weight: 500;\n    line-height: 30px;\n  }\n\n  .sub-text{\n    text-align: left;\n    padding-top: 20px;\n    font-size: 15px;\n  }\n\n  .text-small{\n    text-align: left;\n    font-size: 14px;\n  }\n\n  li {\n    display: inline-block !important;\n    list-style: none;\n    margin: 0 auto;\n    height: 14px;\n    }\n      ul li::after {\n        content: \" | \";\n        margin: 0 10px;\n      }\n      ul li:last-child:after {\n        content: '';\n        margin: 0 10px;\n      }\n      ul{\n        padding: 0;\n        margin: 0;\n      }\n"],"sourceRoot":""}]);
+    }
+`, "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":";;AAEA;IACI,uBAAuB;IACvB,YAAY;AAChB;;AAEA;IACI,kBAAkB;AACtB;;AAEA;IACI,mBAAmB;AACvB;;AAEA;IACI,aAAa;IACb,sBAAsB;AAC1B;;AAEA;IACI,YAAY;IACZ,kBAAkB;IAClB,SAAS;AACb;;AAEA;IACI,aAAa;IACb,cAAc;IACd,kBAAkB;IAClB,uBAAuB;AAC3B;;AAEA;IACI,eAAe;AACnB;;AAEA;IACI,mBAAmB;IACnB,YAAY;IACZ,aAAa;IACb,kBAAkB;IAClB,4BAA4B;IAC5B,mBAAmB;;AAEvB;;AAEA;IACI,oBAAoB;IACpB,kBAAkB;IAClB,uBAAuB;IACvB,qBAAqB;AACzB;;AAEA;IACI,oBAAoB;IACpB,mBAAmB;IACnB,uBAAuB;AAC3B;;AAEA;IACI,cAAc;IACd,iBAAiB;IACjB,kBAAkB;IAClB,YAAY;IACZ,aAAa;AACjB;;AAEA;IACI,YAAY;IACZ,eAAe;IACf,gBAAgB;IAChB,kBAAkB;AACtB;;AAEA;IACI,YAAY;AAChB;;AAEA;IACI,WAAW;AACf;;AAEA;IACI,gBAAgB;IAChB,iBAAiB;IACjB,eAAe;EACjB;;AAEF;IACI,gBAAgB;IAChB,eAAe;AACnB;;AAEA;IACI,eAAe;IACf,UAAU;IACV,kBAAkB;IAClB,OAAO;IACP,MAAM;IACN,WAAW;IACX,YAAY;IACZ,cAAc;IACd,4BAA4B;IAC5B,iCAAiC;AACrC;;AAEA;IACI,uBAAuB;IACvB,YAAY;IACZ,aAAa;IACb,sBAAsB;IACtB,UAAU;AACd;;AAEA;IACI,gBAAgB;IAChB,iBAAiB;IACjB,eAAe;IACf,gBAAgB;IAChB,iBAAiB;EACnB;;AAEF;IACI,YAAY;IACZ,uBAAuB;IACvB,aAAa;IACb,YAAY;IACZ,eAAe;IACf,iBAAiB;AACrB;;AAEA;;IAEI,YAAY;IACZ,qBAAqB;IACrB,eAAe;AACnB;;AAEA;IACI,qBAAqB;IACrB,gBAAgB;IAChB,cAAc;IACd,YAAY;IACZ;IACA;QACI,cAAc;QACd,cAAc;IAClB;IACA;QACI,WAAW;QACX,cAAc;IAClB;IACA;QACI,UAAU;QACV,SAAS;IACb","sourcesContent":["\n\nbody {\n    background-color: black;\n    margin: 20px;\n}\n\n.hide {\n    visibility: hidden;\n}\n  \n.show {\n    visibility: visible;\n}\n\n.carousel-main {\n    display: flex;\n    flex-direction: column;\n}\n  \n.category-title {\n    color: white;\n    padding-left: 25px;\n    margin: 0;\n}\n\n.carousel-content {\n    display: flex;\n    margin: 0 15px;\n    overflow-x: hidden;\n    scroll-behavior: smooth;\n}\n\n.carousel-content > :last-child {\n    margin-right: 0;\n}\n  \n.image {\n    margin-bottom: 20px;\n    width: 300px;\n    height: 150px;\n    border-style:solid;\n    background-size: 300px 150px;\n    white-space: nowrap;\n\n}\n\n.image:focus {\n    outline-color: white;\n    border-color:white;\n    background-color: white;\n    transform: scale(1.1);\n}\n\n.image:active {\n    outline-color: green;\n    border-color: green;\n    background-color: green;\n}\n  \n.image-center {\n    display: block;\n    margin-left: auto;\n    margin-right: auto;\n    width: 300px;\n    height: 150px;\n}\n\n.show-title {\n    color: white;\n    font-size: 18px;\n    font-weight: 200;\n    margin-right: 20px;\n}\n\n.show-content {\n    margin: 20px;\n}\n\n.text {\n    color:white;\n}\n\n.sub-text{\n    text-align: left;\n    padding-top: 20px;\n    font-size: 15px;\n  }\n\n.text-small {\n    text-align: left;\n    font-size: 14px;\n}\n\n.modal {\n    position: fixed; \n    z-index: 1; \n    padding-top: 100px; \n    left: 0;\n    top: 0;\n    width: 100%; \n    height: 100%; \n    overflow: auto; \n    background-color: rgb(0,0,0); \n    background-color: rgba(0,0,0,0.4); \n}\n  \n.modal-content {\n    background-color: black;\n    margin: auto;\n    padding: 20px;\n    border: 1px solid #888;\n    width: 50%;\n}\n\n.modal-text{\n    text-align: left;\n    padding-top: 20px;\n    font-size: 24px;\n    font-weight: 500;\n    line-height: 30px;\n  }\n  \n.close {\n    color: white;\n    background-color: black;\n    border: black;\n    float: right;\n    font-size: 28px;\n    font-weight: bold;\n}\n  \n.close:hover,\n.close:focus {\n    color: green;\n    text-decoration: none;\n    cursor: pointer;\n}\n\nli {\n    display: inline-block;\n    list-style: none;\n    margin: 0 auto;\n    height: 14px;\n    }\n    ul li::after {\n        content: \" | \";\n        margin: 0 10px;\n    }\n    ul li:last-child:after {\n        content: '';\n        margin: 0 10px;\n    }\n    ul {\n        padding: 0;\n        margin: 0;\n    }\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -585,20 +585,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./public/assets/hulu_originals.jpg":
-/*!******************************************!*\
-  !*** ./public/assets/hulu_originals.jpg ***!
-  \******************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "public/assets/hulu_originals.jpg");
-
-/***/ }),
-
 /***/ "./src/hulu-originals-display/hulu-originals-display.ts":
 /*!**************************************************************!*\
   !*** ./src/hulu-originals-display/hulu-originals-display.ts ***!
@@ -656,7 +642,7 @@ const main = () => __awaiter(void 0, void 0, void 0, function* () {
             let myDate = new Date(carouselContents.entity_metadata.premiere_date);
             let newDate = myDate.getFullYear();
             huluOriginalDisplay += `
-                <div>
+                <div class="show-content">
                     <button class="image" style="background-image:url(${carouselContents.visuals.artwork.horizontal_tile.image.path}&size=300x150&format=jpeg), url('../public/assets/hulu-default.png')"></button>
                     <div class="show-title">${carouselContents.visuals.headline}</div>
                     <ul class="subtitle hide">
@@ -707,18 +693,16 @@ var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _argume
 
 
 let currentShow = 0;
-const modal = document.getElementById("myModal");
-const content = document.querySelector(".carousel-content");
+const modal = document.getElementById("show-modal");
 //shift carousel on right/left and focus on selected show
-const currentSelected = (x, i) => {
+const currentSelected = (y, x) => {
     const carousel = document.querySelectorAll('.carousel-main');
-    const categoryCarousel = carousel[x];
+    const categoryCarousel = carousel[y];
     const carouselContent = categoryCarousel.querySelectorAll('.carousel-content')[0];
-    const imageButtonToggle = carouselContent.querySelectorAll('.image')[i];
-    currentShow = i;
-    content === null || content === void 0 ? void 0 : content.scrollTo(content.children[i].offsetLeft - content.offsetLeft, 0);
+    const imageButtonToggle = carouselContent.querySelectorAll('.image')[x];
+    currentShow = x;
     imageButtonToggle.focus();
-    return i;
+    return x;
 };
 const remote = () => __awaiter(void 0, void 0, void 0, function* () {
     const carousel = document.querySelectorAll('.carousel-main');
@@ -735,58 +719,82 @@ const remote = () => __awaiter(void 0, void 0, void 0, function* () {
     let defaultCategories = defaultData.components;
     //category for loop
     for (let x = 0; x < defaultCategories.length; x++) {
-        if (defaultCategories[x].items.length == 0) {
-            data = yield (0,___WEBPACK_IMPORTED_MODULE_0__.getEmptyData)(defaultCategories[x].id);
-            categories = data;
+        const categoryCarousel = carousel[x];
+        const carouselContent = categoryCarousel.querySelectorAll('.carousel-content')[0];
+        if (defaultCategories[x].items.length !== 0) {
+            //show for loop
+            for (let y = 0; y < defaultCategories[x].items.length; y++) {
+                const imageButtonToggle = carouselContent.querySelectorAll('.image')[y];
+                focus(x, y);
+                //navigate right/left on category carousels and up/down between category carousels
+                imageButtonToggle.addEventListener("keyup", (event) => {
+                    if (event.key == 'ArrowRight') {
+                        currentSelected(x, currentShow === defaultCategories[x].items.length - 1 ? 0 : currentShow + 1);
+                    }
+                    if (event.key == 'ArrowLeft') {
+                        currentSelected(x, (currentShow === 0 ? defaultCategories[x].items.length : currentShow) - 1);
+                    }
+                    if (event.key == 'ArrowDown') {
+                        currentSelected(x === defaultCategories.length - 1 ? 0 : x + 1, 0);
+                    }
+                    if (event.key == 'ArrowUp') {
+                        currentSelected((x === 0 ? defaultCategories.length : x) - 1, 0);
+                    }
+                });
+            }
         }
         else {
-            data = yield (0,___WEBPACK_IMPORTED_MODULE_0__.getData)();
-            categories = data.components[x];
-            console.log(x);
-        }
-        //show for loop
-        for (let i = 0; i < categories.items.length; i++) {
-            const categoryCarousel = carousel[x];
-            const carouselContent = categoryCarousel.querySelectorAll('.carousel-content')[0];
-            const imageButtonToggle = carouselContent.querySelectorAll('.image')[i];
-            const subTitleToggle = carouselContent.querySelectorAll('.subtitle')[i];
-            console.log(imageButtonToggle);
-            //open modal on enter/click
-            imageButtonToggle.addEventListener('click', function () {
-                currentShow = i;
-                modal === null || modal === void 0 ? void 0 : modal.classList.add('show');
-                modal === null || modal === void 0 ? void 0 : modal.classList.remove('hide');
-                console.log(x, i);
-                (0,_hulu_originals_modal_hulu_originals_modal__WEBPACK_IMPORTED_MODULE_1__.openModal)(i, x);
-            });
-            //add subtitle information on focus
-            imageButtonToggle.addEventListener('focus', function () {
-                subTitleToggle.classList.remove('hide');
-                subTitleToggle.classList.add('show');
-            });
-            //remove subtitle information on focus
-            imageButtonToggle.addEventListener('focusout', function () {
-                subTitleToggle.classList.add('hide');
-                subTitleToggle.classList.remove('show');
-            });
-            //navigate right/left on category carousels and up/down between category carousels
-            imageButtonToggle.addEventListener("keyup", (event) => {
-                if (event.key == 'ArrowRight') {
-                    currentSelected(x, currentShow === categories.items.length - 1 ? 0 : currentShow + 1);
-                }
-                if (event.key == 'ArrowLeft') {
-                    currentSelected(x, (currentShow === 0 ? categories.items.length : currentShow) - 1);
-                }
-                if (event.key == 'ArrowDown') {
-                    currentSelected(x === defaultCategories.length - 1 ? 0 : x + 1, 0);
-                }
-                if (event.key == 'ArrowUp') {
-                    currentSelected((x === 0 ? defaultCategories.length : x) - 1, 0);
-                }
-            });
+            //when the items are empty fetch empty collection data
+            data = yield (0,___WEBPACK_IMPORTED_MODULE_0__.getEmptyData)(defaultCategories[x].id);
+            categories = data;
+            for (let y = 0; y < categories.items.length; y++) {
+                const imageButtonToggle = carouselContent.querySelectorAll('.image')[y];
+                focus(x, y);
+                //navigate right/left on category carousels and up/down between category carousels
+                imageButtonToggle.addEventListener("keyup", (event) => {
+                    if (event.key == 'ArrowRight') {
+                        currentSelected(x, currentShow === categories.items.length - 1 ? 0 : currentShow + 1);
+                    }
+                    if (event.key == 'ArrowLeft') {
+                        currentSelected(x, (currentShow === 0 ? categories.items.length : currentShow) - 1);
+                    }
+                    if (event.key == 'ArrowDown') {
+                        currentSelected(x === defaultCategories.length - 1 ? 0 : x + 1, 0);
+                    }
+                    if (event.key == 'ArrowUp') {
+                        currentSelected((x === 0 ? defaultCategories.length : x) - 1, 0);
+                    }
+                });
+            }
         }
     }
 });
+const focus = (x, y) => {
+    const carousel = document.querySelectorAll('.carousel-main');
+    const categoryCarousel = carousel[x];
+    const carouselContent = categoryCarousel.querySelectorAll('.carousel-content')[0];
+    const imageButtonToggle = carouselContent.querySelectorAll('.image')[y];
+    const subTitleToggle = carouselContent.querySelectorAll('.subtitle')[y];
+    //open modal on enter/click
+    imageButtonToggle.addEventListener('click', () => {
+        currentShow = y;
+        modal === null || modal === void 0 ? void 0 : modal.classList.add('show');
+        modal === null || modal === void 0 ? void 0 : modal.classList.remove('hide');
+        (0,_hulu_originals_modal_hulu_originals_modal__WEBPACK_IMPORTED_MODULE_1__.openModal)(y, x);
+        subTitleToggle.classList.remove('hide');
+        subTitleToggle.classList.add('show');
+    });
+    //add subtitle information on focus
+    imageButtonToggle.addEventListener('focus', () => {
+        subTitleToggle.classList.remove('hide');
+        subTitleToggle.classList.add('show');
+    });
+    //remove subtitle information on focus
+    imageButtonToggle.addEventListener('focusout', () => {
+        subTitleToggle.classList.add('hide');
+        subTitleToggle.classList.remove('show');
+    });
+};
 
 
 /***/ }),
@@ -812,7 +820,7 @@ var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _argume
     });
 };
 
-let modal = document.getElementById("myModal");
+let modal = document.getElementById("show-modal");
 let closeButton = document.getElementsByClassName("close")[0];
 //open show modal
 const openModal = (i, x) => __awaiter(void 0, void 0, void 0, function* () {
@@ -820,7 +828,6 @@ const openModal = (i, x) => __awaiter(void 0, void 0, void 0, function* () {
     const categoryCarousel = carousel[x];
     const carouselContent = categoryCarousel.querySelectorAll('.carousel-content')[0];
     const imageButtonToggle = carouselContent.querySelectorAll('.image')[i];
-    closeButton.focus();
     let data;
     let items;
     let defaultData = yield (0,___WEBPACK_IMPORTED_MODULE_0__.getData)();
@@ -834,7 +841,9 @@ const openModal = (i, x) => __awaiter(void 0, void 0, void 0, function* () {
     else {
         data = yield (0,___WEBPACK_IMPORTED_MODULE_0__.getData)();
         items = data.components[x].items[i];
-        console.log(x);
+    }
+    if (closeButton != undefined) {
+        closeButton.focus();
     }
     let myDate = new Date(items.entity_metadata.premiere_date);
     let newDate = myDate.getFullYear();
@@ -842,7 +851,7 @@ const openModal = (i, x) => __awaiter(void 0, void 0, void 0, function* () {
     //modal contents
     output += `
             <img class="image-center" src="${items.visuals.artwork.horizontal_tile.image.path}&size=400x250&format=jpeg" onerror="this.onerror=null;this.src='../public/assets/hulu-default.png';"/>
-            <div class="text text-center">${items.visuals.headline}</div>
+            <div class="text modal-text">${items.visuals.headline}</div>
             <ul>
                 <li class="text text-small">${newDate}</li>`;
     if (items.entity_metadata.rating.code !== undefined) {
@@ -854,7 +863,7 @@ const openModal = (i, x) => __awaiter(void 0, void 0, void 0, function* () {
         `;
     modalContent.innerHTML = output;
     //close modal
-    closeButton === null || closeButton === void 0 ? void 0 : closeButton.addEventListener('click', function (e) {
+    closeButton === null || closeButton === void 0 ? void 0 : closeButton.addEventListener('click', () => {
         modal === null || modal === void 0 ? void 0 : modal.classList.add('hide');
         modal === null || modal === void 0 ? void 0 : modal.classList.remove('show');
         imageButtonToggle.focus();
@@ -884,9 +893,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   getEmptyData: () => (/* binding */ getEmptyData)
 /* harmony export */ });
 /* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ "./src/style.css");
-/* harmony import */ var _public_assets_hulu_originals_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../public/assets/hulu_originals.jpg */ "./public/assets/hulu_originals.jpg");
-/* harmony import */ var _public_assets_hulu_default_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../public/assets/hulu-default.png */ "./public/assets/hulu-default.png");
-/* harmony import */ var _hulu_originals_display_hulu_originals_display__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./hulu-originals-display/hulu-originals-display */ "./src/hulu-originals-display/hulu-originals-display.ts");
+/* harmony import */ var _public_assets_hulu_default_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../public/assets/hulu-default.png */ "./public/assets/hulu-default.png");
+/* harmony import */ var _hulu_originals_display_hulu_originals_display__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./hulu-originals-display/hulu-originals-display */ "./src/hulu-originals-display/hulu-originals-display.ts");
 var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -896,7 +904,6 @@ var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _argume
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-
 
 
 
@@ -916,7 +923,7 @@ const getEmptyData = (id) => __awaiter(void 0, void 0, void 0, function* () {
     const emptyShowData = yield response.json();
     return emptyShowData;
 });
-(0,_hulu_originals_display_hulu_originals_display__WEBPACK_IMPORTED_MODULE_3__.main)();
+(0,_hulu_originals_display_hulu_originals_display__WEBPACK_IMPORTED_MODULE_2__.main)();
 
 
 /***/ }),
